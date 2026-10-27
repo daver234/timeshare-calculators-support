@@ -14,6 +14,6 @@ python3 -m http.server --directory docs 8000
 
 Then open `http://localhost:8000`.
 
-## Cloudflare Pages
+## Cloudflare Workers
 
-Connect this repository, use `main` as the production branch, leave the build command blank, and set the output directory to `docs`.
+Connect this repository to Workers Builds and use `main` as the production branch. Leave the build command blank and use `npx wrangler deploy` as the deploy command. Static assets are configured in `wrangler.jsonc` and served from `docs/`.
